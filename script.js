@@ -415,7 +415,7 @@ class MazeProgrammingApp {
         if (this.characterImage && this.characterImage.complete) {
             this.ctx.save();
             this.ctx.translate(this.character.x, this.character.y);
-            this.ctx.rotate(this.character.angle);
+            this.ctx.rotate(this.character.angle + Math.PI / 2);
             
             // Draw Benson image
             const imageSize = this.character.size * 2; // Make it a bit larger
