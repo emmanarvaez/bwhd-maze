@@ -682,7 +682,7 @@ class MazeProgrammingApp {
         
         // Position at bottom left, 4 cells to the right
         this.character.x = 130 + x + (4 * cellSize) + (cellSize / 2);
-        this.character.y = y + canvasSize - (cellSize / 2) - 60; // Bottom of the maze
+        this.character.y = y + canvasSize - (cellSize / 2) - 45; // Bottom of the maze
         
         console.log('Character position set to:', this.character.x, this.character.y);
         console.log('Canvas size:', canvasSize, 'Cell size:', cellSize);
