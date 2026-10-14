@@ -9,7 +9,7 @@ class MazeProgrammingApp {
             x: 0, // Will be set based on grid position
             y: 0, // Will be set based on grid position
             angle: -Math.PI / 2, // Start facing upwards (pointing up)
-            size: 20,
+            size: 50,
             color: '#ff6b6b'
         };
         this.trail = [];
