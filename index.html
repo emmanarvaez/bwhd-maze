@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze Programming Interface</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Maze Programming Interface</h1>
+            <div class="header-actions">
+                <div class="controls" id="controlsSection">
+                    <button id="runBtn" class="btn btn-success">Run Program</button>
+                    <button id="clearBtn" class="btn btn-warning">Clear Program</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Maze Section -->
+            <div class="maze-section">
+                <div class="maze-container">
+                    <canvas id="mazeCanvas" width="800" height="600"></canvas>
+                </div>
+            </div>
+
+            <!-- Programming Section -->
+            <div class="programming-section">
+                <div class="programming-header">
+                    <h3>Movement</h3>
+                    <button id="toggleBlocksBtn" class="btn btn-secondary">Hide Blocks</button>
+                </div>
+                <div class="blocks-palette" id="blocksSection">
+                    <div class="block-categories">
+                        <div class="category">
+                            <div class="category-content">
+                                <div class="movement-blocks">
+                                    <div class="block" data-type="move-forward" draggable="true">
+                                        <span>Move Forward</span>
+                                    </div>
+                                    <div class="block" data-type="turn-left" draggable="true">
+                                        <span>Turn Left</span>
+                                    </div>
+                                    <div class="block" data-type="turn-right" draggable="true">
+                                        <span>Turn Right</span>
+                                    </div>
+                                </div>
+                                <div class="loop-section">
+                                    <div class="block loop-block" data-type="repeat">
+                                        <div class="loop-header">
+                                            <span>Loop</span>
+                                            <input type="number" value="3" min="1" max="10" class="number-input">
+                                            <span>times</span>
+                                        </div>
+                                        <div class="loop-content">
+                                            <div class="nested-block">
+                                                <span>Insert blocks here</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="program-area">
+                    <h3>Program</h3>
+                    <div id="programContainer" class="program-container">
+                        <p class="drop-hint">Click blocks to add them to your program</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
